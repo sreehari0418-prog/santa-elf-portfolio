@@ -5,13 +5,32 @@ import About from './components/About';
 import Contact from './components/Contact';
 import { TerminalSquare } from 'lucide-react';
 
+
 function App() {
+  // Restore Christmas Spirit
+  useEffect(() => {
+    const createSnowflake = () => {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.innerText = '❄';
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+      snowflake.style.opacity = Math.random();
+      snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+
+      document.body.appendChild(snowflake);
+
+      setTimeout(() => {
+        snowflake.remove();
+      }, 5000);
+    };
+
+    const interval = setInterval(createSnowflake, 150);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen relative z-10 selection:bg-primary selection:text-bg-page">
-      {/* Santa Animation */}
-      <div className="santa-sleigh">
-        🦌🦌🛷🎅
-      </div>
 
       <nav className="fixed top-0 w-full z-50 border-b border-border bg-bg-page/80 backdrop-blur-md">
         <div className="container flex justify-between items-center h-16">

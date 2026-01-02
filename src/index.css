@@ -126,39 +126,29 @@ h6 {
 }
 
 /* Animation Removed */
-@keyframes sleigh-ride {
+/* Animation Swapped */
+@keyframes snow {
     0% {
-        top: -10vh;
-        right: -10vw;
+        transform: translateY(-10px);
         opacity: 0;
     }
 
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
+    20% {
+        opacity: 0.8;
     }
 
     100% {
-        top: 110vh;
-        /* Bottom */
-        right: 110vw;
-        /* Left */
+        transform: translateY(100vh);
         opacity: 0;
     }
 }
 
-.santa-sleigh {
+.snowflake {
     position: fixed;
-    font-size: 4rem;
-    /* Big */
-    z-index: 20;
-    /* Behind content but visible */
+    color: #fff;
+    z-index: 50;
     pointer-events: none;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
-    animation: sleigh-ride 20s linear infinite;
-    transform: rotate(15deg);
-    /* Tilt slightly down */
+    animation: snow linear infinite;
+    filter: blur(0.5px);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
