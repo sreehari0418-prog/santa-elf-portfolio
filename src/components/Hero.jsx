@@ -20,7 +20,7 @@ const Hero = () => {
                         I am <strong className="text-white">Sreehari Evergreen</strong>, a Senior Systems Architect specializing in quantum logistics, RTOS sleigh navigation, and high-availability magical infrastructure.
                     </p>
 
-                    <div className="flex flex-wrap gap-4 pt-4">
+                    <div className="flex flex-col sm:flex-row gap-6 pt-4">
                         <button className="btn-primary" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
                             View My Projects <ArrowRight size={18} />
                         </button>

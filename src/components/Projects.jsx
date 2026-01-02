@@ -44,23 +44,12 @@ const Projects = () => {
     return (
         <section id="projects" className="section-screen py-24">
             <div className="container">
-                <div className="flex justify-between items-end mb-12">
-                    {/* Header Removed */}
-                    <span className="hidden"></span>
-                    <a href="#" className="text-sm text-text-muted hover:text-white flex items-center gap-1">
-                        View Archive <ArrowUpRight size={14} />
-                    </a>
+                <div className="mb-12">
+                    {/* Clean Header */}
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
-                    {/* Header Row */}
-                    <div className="hidden md:grid grid-cols-12 gap-4 text-xs font-semibold text-text-muted px-6 pb-2 border-b border-border/50 uppercase tracking-wider">
-                        <div className="col-span-1">Year</div>
-                        <div className="col-span-3">Project</div>
-                        <div className="col-span-2">Role</div>
-                        <div className="col-span-3">Tech Stack</div>
-                        <div className="col-span-3 text-right">Link</div>
-                    </div>
+                    {/* Header Row Removed */}
 
                     {projects.map((p, i) => (
                         <div key={i} className="group relative grid md:grid-cols-12 gap-4 p-6 rounded-lg border border-transparent hover:bg-bg-card-hover hover:border-border transition-all items-center">
