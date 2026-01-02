@@ -29,14 +29,8 @@ body {
     background-position: center top;
 }
 
-/* Fade out the grid slightly */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(circle at center, transparent 0%, var(--bg-page) 100%);
-    pointer-events: none;
-}
+/* Fade out removed for brightness */
+/* body::before was here */
 
 h1,
 h2,

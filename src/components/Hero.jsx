@@ -24,9 +24,9 @@ const Hero = () => {
                         <button className="btn-primary">
                             View Projects <ArrowRight size={18} />
                         </button>
-                        <button className="btn-secondary">
+                        <a href="/sree.pdf" download="Sreehari_Resume.pdf" className="btn-secondary">
                             Download Resume <Download size={18} />
-                        </button>
+                        </a>
                     </div>
 
                     <div className="pt-16 grid grid-cols-3 gap-8 border-t border-border">

@@ -5,35 +5,44 @@ const Projects = () => {
     const projects = [
         {
             year: "2024",
-            title: "Sleigh-OS v4.0",
-            role: "Lead Architect",
-            tech: "Rust / WASM / RTOS",
-            desc: "Real-time navigation kernel for Mach-10 flight. Reduced latency by 40%.",
-            status: "Classified",
+            title: "AI Equipment Dashboard",
+            role: "Full Stack Developer",
+            tech: "React / Python / Vercel",
+            desc: "IoT-based health & efficiency monitoring for construction equipment. Deployed on Vercel & Render.",
+            status: "Live",
+            link: "#"
+        },
+        {
+            year: "2024",
+            title: "Netflix Puzzled Clone",
+            role: "Frontend Engineer",
+            tech: "React / Motion / CSS",
+            desc: "High-fidelity recreation of Netflix's game UI with complex staggered animations and glassmorphism.",
+            status: "Live",
             link: "#"
         },
         {
             year: "2023",
-            title: "Global Behavior Ledger",
-            role: "Senior Engineer",
-            tech: "Solidity / Node.js",
-            desc: "Immutable blockchain for tracking Naughty/Nice metrics with zero-knowledge proofs.",
-            status: "Public Beta",
+            title: "Calculator PWA",
+            role: "Mobile Developer",
+            tech: "PWA / JS / Android",
+            desc: "Offline-capable scientific calculator with installable mobile support (PWA).",
+            status: "Shipped",
             link: "#"
         },
         {
-            year: "2022",
-            title: "Wrap-Speed Geometry",
-            role: "Algorithm Designer",
-            tech: "Python / TensorFlow",
-            desc: "ML model optimizing paper usage for irregular shapes. Saved 400 tons of paper.",
-            status: "Internal Tool",
+            year: "2023",
+            title: "Blood Report Fitness",
+            role: "Systems Architect",
+            tech: "ML / Data Analysis",
+            desc: "Automated analysis of blood work to generate personalized fitness and health recommendations.",
+            status: "Prototype",
             link: "#"
         }
     ];
 
     return (
-        <section id="projects" className="py-24">
+        <section id="projects" className="section-screen py-24">
             <div className="container">
                 <div className="flex justify-between items-end mb-12">
                     <h2 className="text-3xl font-bold">Selected Works</h2>
@@ -59,7 +68,6 @@ const Projects = () => {
                             <div className="col-span-3">
                                 <h3 className="font-bold text-white group-hover:text-primary transition-colors flex items-center gap-2">
                                     {p.title}
-                                    {p.status === 'Classified' && <Lock size={12} className="text-text-muted" />}
                                 </h3>
                                 <p className="md:hidden text-sm text-text-muted mt-1">{p.desc}</p>
                             </div>
