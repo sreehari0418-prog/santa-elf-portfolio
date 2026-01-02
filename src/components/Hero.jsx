@@ -21,26 +21,26 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
-                        <button className="btn-primary">
-                            View Projects <ArrowRight size={18} />
+                        <button className="btn-primary" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
+                            View My Projects <ArrowRight size={18} />
                         </button>
-                        <a href="/sree.pdf" download="Sreehari_Resume.pdf" className="btn-secondary">
+                        <a href="/sree.pdf" download="Sreehari_Resume.pdf" className="btn-primary">
                             Download Resume <Download size={18} />
                         </a>
                     </div>
 
                     <div className="pt-16 grid grid-cols-3 gap-8 border-t border-border">
                         <div>
-                            <div className="text-3xl font-bold text-white">99.9%</div>
-                            <div className="text-sm text-text-muted mt-1">Delivery Success Rate</div>
+                            <div className="text-3xl font-bold text-white">4+</div>
+                            <div className="text-sm text-text-muted mt-1">Major Projects</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-bold text-white">7.8B</div>
-                            <div className="text-sm text-text-muted mt-1">Requests Processed</div>
+                            <div className="text-3xl font-bold text-white">Full Stack</div>
+                            <div className="text-sm text-text-muted mt-1">Development Ready</div>
                         </div>
                         <div>
-                            <div className="text-3xl font-bold text-white">40ms</div>
-                            <div className="text-sm text-text-muted mt-1">Avg. Latency</div>
+                            <div className="text-3xl font-bold text-white">100%</div>
+                            <div className="text-sm text-text-muted mt-1">Commitment</div>
                         </div>
                     </div>
                 </div>

@@ -45,7 +45,8 @@ const Projects = () => {
         <section id="projects" className="section-screen py-24">
             <div className="container">
                 <div className="flex justify-between items-end mb-12">
-                    <h2 className="text-3xl font-bold">Selected Works</h2>
+                    {/* Header Removed */}
+                    <span className="hidden"></span>
                     <a href="#" className="text-sm text-text-muted hover:text-white flex items-center gap-1">
                         View Archive <ArrowUpRight size={14} />
                     </a>

@@ -11,13 +11,10 @@ function App() {
       <nav className="fixed top-0 w-full z-50 border-b border-border bg-bg-page/80 backdrop-blur-md">
         <div className="container flex justify-between items-center h-16">
           <div className="font-bold flex items-center gap-2 text-primary">
-            <TerminalSquare size={20} />
-            <span className="text-text-main tracking-tight">EVERGREEN_LABS</span>
+            {/* Logo/Title removed as requested */}
           </div>
           <div className="flex gap-8 text-sm font-medium text-text-muted">
-            <a href="#about" className="hover:text-text-main transition-colors">Overview</a>
-            <a href="#projects" className="hover:text-text-main transition-colors">Work</a>
-            <a href="#contact" className="hover:text-text-main transition-colors">Contact</a>
+            {/* Nav links removed as requested */}
           </div>
         </div>
       </nav>
