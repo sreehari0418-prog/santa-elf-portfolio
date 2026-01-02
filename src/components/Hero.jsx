@@ -3,7 +3,7 @@ import { Terminal, Gift, Code } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <section className="section-screen relative overflow-hidden">
             <div className="container grid md:grid-cols-2 gap-12 items-center relative z-10">
                 <div className="space-y-6">
                     <div className="inline-block px-4 py-2 glass rounded-full text-secondary text-sm font-bold border border-secondary/30">

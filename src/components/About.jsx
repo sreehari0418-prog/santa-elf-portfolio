@@ -3,7 +3,7 @@ import { Cpu, Wind, Zap, Database } from 'lucide-react';
 
 const About = () => {
     return (
-        <section id="about" className="py-20 relative">
+        <section id="about" className="section-screen relative">
             <div className="container">
                 <div className="flex flex-col md:flex-row gap-16">
                     <div className="md:w-1/3">

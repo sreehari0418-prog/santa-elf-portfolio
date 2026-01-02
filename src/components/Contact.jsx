@@ -3,7 +3,7 @@ import { Mail, Github, Linkedin, Send } from 'lucide-react';
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-20">
+        <section id="contact" className="section-screen">
             <div className="container max-w-4xl text-center">
                 <div className="glass p-12 relative overflow-hidden">
                     {/* Decorative glow */}

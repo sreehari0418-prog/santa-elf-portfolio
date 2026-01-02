@@ -24,7 +24,7 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-20 relative bg-bg-dark/50">
+        <section id="projects" className="section-screen relative bg-bg-dark/50">
             <div className="container">
                 <div className="flex justify-between items-end mb-12">
                     <div>
