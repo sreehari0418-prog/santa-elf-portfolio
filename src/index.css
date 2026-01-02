@@ -126,3 +126,39 @@ h6 {
 }
 
 /* Animation Removed */
+@keyframes sleigh-ride {
+    0% {
+        top: -10vh;
+        right: -10vw;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 110vh;
+        /* Bottom */
+        right: 110vw;
+        /* Left */
+        opacity: 0;
+    }
+}
+
+.santa-sleigh {
+    position: fixed;
+    font-size: 4rem;
+    /* Big */
+    z-index: 20;
+    /* Behind content but visible */
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    animation: sleigh-ride 20s linear infinite;
+    transform: rotate(15deg);
+    /* Tilt slightly down */
+}

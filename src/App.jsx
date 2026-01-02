@@ -8,6 +8,11 @@ import { TerminalSquare } from 'lucide-react';
 function App() {
   return (
     <div className="min-h-screen relative z-10 selection:bg-primary selection:text-bg-page">
+      {/* Santa Animation */}
+      <div className="santa-sleigh">
+        🦌🦌🛷🎅
+      </div>
+
       <nav className="fixed top-0 w-full z-50 border-b border-border bg-bg-page/80 backdrop-blur-md">
         <div className="container flex justify-between items-center h-16">
           <div className="font-bold flex items-center gap-2 text-primary">
