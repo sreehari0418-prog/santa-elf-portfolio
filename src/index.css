@@ -125,29 +125,4 @@ h6 {
     border-radius: 4px;
 }
 
-@keyframes snow {
-    0% {
-        transform: translateY(-10px);
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-}
-
-.snowflake {
-    position: fixed;
-    color: #fff;
-    z-index: 50;
-    /* Ensure on top */
-    pointer-events: none;
-    animation: snow linear infinite;
-    filter: blur(0.5px);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-}
+/* Animation Removed */
