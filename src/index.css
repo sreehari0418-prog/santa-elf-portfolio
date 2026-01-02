@@ -145,10 +145,14 @@ h6 {
 
 .snowflake {
     position: fixed;
+    top: -20px;
     color: #fff;
     z-index: 50;
     pointer-events: none;
-    animation: snow linear infinite;
+    animation-name: snow;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* Duration is set via JS */
     filter: blur(0.5px);
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
