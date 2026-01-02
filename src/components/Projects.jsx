@@ -1,58 +1,81 @@
 import React from 'react';
-import { ExternalLink, Github, Box, Layers, Radio } from 'lucide-react';
+import { ArrowUpRight, Lock, GitBranch } from 'lucide-react';
 
 const Projects = () => {
     const projects = [
         {
+            year: "2024",
             title: "Sleigh-OS v4.0",
-            desc: "Real-time RTOS for sleigh navigation, featuring anti-gravity kernel modules and chimney edge-detection.",
-            tags: ["C++", "Rust", "MagicL"],
-            icon: <Box size={40} className="text-secondary" />
+            role: "Lead Architect",
+            tech: "Rust / WASM / RTOS",
+            desc: "Real-time navigation kernel for Mach-10 flight. Reduced latency by 40%.",
+            status: "Classified",
+            link: "#"
         },
         {
-            title: "Naughty-Nice Ledger",
-            desc: "Immutable blockchain ledger for tracking global behavior metrics. 0% false positive rate.",
-            tags: ["Solidity", "React", "Web3"],
-            icon: <Layers size={40} className="text-accent" />
+            year: "2023",
+            title: "Global Behavior Ledger",
+            role: "Senior Engineer",
+            tech: "Solidity / Node.js",
+            desc: "Immutable blockchain for tracking Naughty/Nice metrics with zero-knowledge proofs.",
+            status: "Public Beta",
+            link: "#"
         },
         {
-            title: "Wrap-Speed Algorithm",
-            desc: "AI-driven geometric optimization for wrapping irregular shapes. Reduced paper waste by 40%.",
-            tags: ["Python", "TensorFlow", "Geometry"],
-            icon: <Radio size={40} className="text-primary" />
+            year: "2022",
+            title: "Wrap-Speed Geometry",
+            role: "Algorithm Designer",
+            tech: "Python / TensorFlow",
+            desc: "ML model optimizing paper usage for irregular shapes. Saved 400 tons of paper.",
+            status: "Internal Tool",
+            link: "#"
         }
     ];
 
     return (
-        <section id="projects" className="section-screen relative bg-bg-dark/50">
+        <section id="projects" className="py-24">
             <div className="container">
                 <div className="flex justify-between items-end mb-12">
-                    <div>
-                        <h2 className="text-4xl gradient-text mb-2">Toy Blueprints</h2>
-                        <p className="text-text-muted">Classified projects from the R&D Lab.</p>
-                    </div>
+                    <h2 className="text-3xl font-bold">Selected Works</h2>
+                    <a href="#" className="text-sm text-text-muted hover:text-white flex items-center gap-1">
+                        View Archive <ArrowUpRight size={14} />
+                    </a>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <div key={index} className="glass p-8 group hover:border-primary/50 transition-colors relative overflow-hidden">
-                            <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
-                                <ExternalLink size={20} />
+                <div className="grid grid-cols-1 gap-4">
+                    {/* Header Row */}
+                    <div className="hidden md:grid grid-cols-12 gap-4 text-xs font-semibold text-text-muted px-6 pb-2 border-b border-border/50 uppercase tracking-wider">
+                        <div className="col-span-1">Year</div>
+                        <div className="col-span-3">Project</div>
+                        <div className="col-span-2">Role</div>
+                        <div className="col-span-3">Tech Stack</div>
+                        <div className="col-span-3 text-right">Link</div>
+                    </div>
+
+                    {projects.map((p, i) => (
+                        <div key={i} className="group relative grid md:grid-cols-12 gap-4 p-6 rounded-lg border border-transparent hover:bg-bg-card-hover hover:border-border transition-all items-center">
+                            <div className="col-span-1 text-sm text-text-muted font-mono">{p.year}</div>
+
+                            <div className="col-span-3">
+                                <h3 className="font-bold text-white group-hover:text-primary transition-colors flex items-center gap-2">
+                                    {p.title}
+                                    {p.status === 'Classified' && <Lock size={12} className="text-text-muted" />}
+                                </h3>
+                                <p className="md:hidden text-sm text-text-muted mt-1">{p.desc}</p>
                             </div>
 
-                            <div className="mb-6 bg-white/5 w-16 h-16 rounded-2xl flex items-center justify-center">
-                                {project.icon}
+                            <div className="col-span-2 hidden md:block text-sm text-text-muted">{p.role}</div>
+
+                            <div className="col-span-3 hidden md:block">
+                                <span className="text-xs font-mono text-text-muted bg-bg-page px-2 py-1 rounded border border-border">
+                                    {p.tech}
+                                </span>
                             </div>
 
-                            <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                            <p className="text-text-muted mb-6 text-sm h-12">{project.desc}</p>
-
-                            <div className="flex flex-wrap gap-2 mt-auto">
-                                {project.tags.map(tag => (
-                                    <span key={tag} className="text-xs font-mono bg-white/5 px-2 py-1 rounded text-primary">
-                                        #{tag}
-                                    </span>
-                                ))}
+                            <div className="col-span-3 text-right flex justify-end">
+                                <a href={p.link} className="inline-flex items-center gap-2 text-sm font-medium text-text-muted hover:text-white group-hover:translate-x-1 transition-transform">
+                                    View Case Study <ArrowUpRight size={16} />
+                                </a>
                             </div>
                         </div>
                     ))}
