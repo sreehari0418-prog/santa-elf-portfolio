@@ -1,4 +1,3 @@
-```javascript
 import React from 'react';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -34,8 +33,8 @@ function App() {
         <div className="container flex justify-between items-center text-text-muted text-sm">
           <p>© 2025 Sreehari Evergreen. All rights reserved.</p>
           <div className="flex gap-4">
-             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-             System Operational
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            System Operational
           </div>
         </div>
       </footer>
@@ -44,4 +43,3 @@ function App() {
 }
 
 export default App;
-```
