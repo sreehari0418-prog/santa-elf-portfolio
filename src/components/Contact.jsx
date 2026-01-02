@@ -15,15 +15,15 @@ const Contact = () => {
                         <strong>Available for immediate deployment.</strong>
                     </p>
 
-                    <a href="mailto:santa@northpole.com?subject=Job Application: Sreehari Evergreen" className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-bg-dark rounded-full font-bold text-lg hover:bg-white hover:scale-105 transition-all mb-12">
+                    <a href="mailto:sreehari0418@gmail.com?subject=Job Application: Sreehari Evergreen" className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-bg-dark rounded-full font-bold text-lg hover:bg-white hover:scale-105 transition-all mb-12">
                         <Send size={20} />
                         Send Job Offer
                     </a>
 
                     <div className="flex justify-center gap-8 text-text-muted">
-                        <a href="#" className="flex items-center gap-2 hover:text-white transition-colors">
+                        <a href="https://github.com/sreehari0418-prog" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors">
                             <Github size={20} />
-                            <span>FrostGithub</span>
+                            <span>sreehari0418-prog</span>
                         </a>
                         <a href="#" className="flex items-center gap-2 hover:text-white transition-colors">
                             <Linkedin size={20} />

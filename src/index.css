@@ -1,15 +1,19 @@
 :root {
-    --bg-dark: #0f172a;
-    --bg-card: rgba(30, 41, 59, 0.7);
-    --primary: #6ee7b7;
-    /* Neon Mint */
-    --secondary: #f43f5e;
-    /* Holo-Red */
-    --accent: #fbbf24;
-    /* Gold */
-    --text-main: #f8fafc;
+    --bg-dark: #020617;
+    /* Darker, deeper blue/black */
+    --bg-card: rgba(15, 23, 42, 0.6);
+    --primary: #34d399;
+    /* Smooth Emerald */
+    --secondary: #fb7185;
+    /* Soft Rose */
+    --accent: #fcd34d;
+    /* Warm Gold */
+    --text-main: #f1f5f9;
     --text-muted: #94a3b8;
-    --font-heading: 'Mountains of Christmas', cursive;
+    --font-heading: 'Outfit', sans-serif;
+    /* Switch main headings to modern sans */
+    --font-accent: 'Mountains of Christmas', cursive;
+    /* Use sparingly */
     --font-body: 'Outfit', sans-serif;
 }
 
@@ -20,6 +24,9 @@ body {
     color: var(--text-main);
     overflow-x: hidden;
     line-height: 1.6;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(52, 211, 153, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(251, 113, 133, 0.05) 0%, transparent 20%);
 }
 
 h1,
@@ -31,11 +38,12 @@ h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     margin: 0;
+    letter-spacing: -0.02em;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -47,32 +55,55 @@ h6 {
     border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary);
-}
-
 /* Utilities */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
+    /* Wider container for immersive feel */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 .gradient-text {
-    background: linear-gradient(to right, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .glass {
     background: var(--bg-card);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Animations included here for now */
+.section-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
 @keyframes snow {
     0% {
         transform: translateY(-10px);
@@ -80,7 +111,7 @@ h6 {
     }
 
     20% {
-        opacity: 1;
+        opacity: 0.8;
     }
 
     100% {
@@ -92,11 +123,8 @@ h6 {
 .snowflake {
     position: fixed;
     color: #fff;
-    font-size: 1em;
-    font-family: Arial, sans-serif;
-    text-shadow: 0 0 5px #000;
     z-index: 0;
-    top: -10px;
     pointer-events: none;
     animation: snow linear infinite;
+    filter: blur(1px);
 }
